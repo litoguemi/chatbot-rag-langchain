@@ -8,13 +8,13 @@ from langchain.schema import (SystemMessage, HumanMessage, AIMessage)
 from langchain import HuggingFaceHub
 from langchain.chains.question_answering import load_qa_chain
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "HUGGINGFACEHUB_API_TOKEN"
 
 
 def get_similar_docs(query, k=5):    
   embeddings = SentenceTransformerEmbeddings(model_name = "all-MiniLM-L6-v2")
 
-  api_key = "3c07ceec-454f-4d3d-bfa0-41d923abb7ed"
+  api_key = "pinecone-api_key"
   pinecone = Pinecone(api_key = api_key)
 
   text_field = "text"
